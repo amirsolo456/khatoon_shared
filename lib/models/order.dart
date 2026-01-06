@@ -52,24 +52,6 @@ class Order {
   }
 
   // تابع کمکی برای تبدیل UserRank به string
-  static String _userRankToString(UserRank rank) {
-    switch (rank) {
-      case UserRank.accountant:
-        return 'accountant';
-      case UserRank.support:
-        return 'support';
-      case UserRank.analyst:
-        return 'analyst';
-      case UserRank.developer:
-        return 'developer';
-      case UserRank.assistant:
-        return 'assistant';
-      case UserRank.user:
-        return 'user';
-      case UserRank.viewer:
-        return 'viewer';
-    }
-  }
 
   Map<String, dynamic> toJson() => _$OrderToJson(this);
 }

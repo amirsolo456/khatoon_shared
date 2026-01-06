@@ -2,9 +2,9 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-import 'delivery.dart';
-import 'enums.dart';
-import 'purchase_item.dart';
+import '../shipping/delivery.dart';
+import '../enums.dart';
+import '../purchase_item.dart';
 part 'payment.g.dart';
 @JsonSerializable()
 class Payment   {

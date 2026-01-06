@@ -1,17 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'purchase_invoice.dart';
+part of 'payment.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-PurchaseInvoice _$PurchaseInvoiceFromJson(Map json) => PurchaseInvoice(
+Payment _$PaymentFromJson(Map json) => Payment(
   id: (json['id'] as num).toInt(),
   sellerId: json['seller_id'] as String,
   sellerName: json['seller_name'] as String,
-  notes: json['notes'] as String,
-  date: (json['date'] as num).toInt(),
   status: (json['status'] as num).toInt(),
   totalAmount: (json['total_amount'] as num).toDouble(),
   paidAmount: (json['paid_amount'] as num).toDouble(),
@@ -27,25 +25,26 @@ PurchaseInvoice _$PurchaseInvoiceFromJson(Map json) => PurchaseInvoice(
   payments: (json['payments'] as List<dynamic>)
       .map((e) => Payment.fromJson(Map<String, dynamic>.from(e as Map)))
       .toList(),
+  date: (json['date'] as num).toInt(),
+  notes: json['notes'] as String,
 );
 
-Map<String, dynamic> _$PurchaseInvoiceToJson(PurchaseInvoice instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'seller_id': instance.sellerId,
-      'seller_name': instance.sellerName,
-      'date': instance.date,
-      'total_amount': instance.totalAmount,
-      'paid_amount': instance.paidAmount,
-      'payment_status': _$PaymentStatusEnumMap[instance.paymentStatus]!,
-      'delivery_status': _$DeliveryStatusEnumMap[instance.deliveryStatus]!,
-      'is_settled': instance.isSettled,
-      'status': instance.status,
-      'items': instance.items.map((e) => e.toJson()).toList(),
-      'payments': instance.payments.map((e) => e.toJson()).toList(),
-      'deliveries': instance.deliveries.map((e) => e.toJson()).toList(),
-      'notes': instance.notes,
-    };
+Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
+  'id': instance.id,
+  'seller_id': instance.sellerId,
+  'seller_name': instance.sellerName,
+  'notes': instance.notes,
+  'date': instance.date,
+  'status': instance.status,
+  'total_amount': instance.totalAmount,
+  'paid_amount': instance.paidAmount,
+  'payment_status': _$PaymentStatusEnumMap[instance.paymentStatus]!,
+  'delivery_status': _$DeliveryStatusEnumMap[instance.deliveryStatus]!,
+  'is_settled': instance.isSettled,
+  'deliveries': instance.deliveries.map((e) => e.toJson()).toList(),
+  'items': instance.items.map((e) => e.toJson()).toList(),
+  'payments': instance.payments.map((e) => e.toJson()).toList(),
+};
 
 const _$PaymentStatusEnumMap = {
   PaymentStatus.unpaid: 'unpaid',

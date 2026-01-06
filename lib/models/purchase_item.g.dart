@@ -6,7 +6,7 @@ part of 'purchase_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PurchaseItem _$PurchaseItemFromJson(Map<String, dynamic> json) => PurchaseItem(
+PurchaseItem _$PurchaseItemFromJson(Map json) => PurchaseItem(
   id: (json['id'] as num).toInt(),
   name: json['name'] as String,
   quantity: (json['quantity'] as num).toInt(),

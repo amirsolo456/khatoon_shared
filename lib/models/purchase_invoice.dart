@@ -1,15 +1,14 @@
-
-
-
 import 'package:json_annotation/json_annotation.dart';
 
-import 'delivery.dart';
+import 'shipping/delivery.dart';
 import 'enums.dart';
-import 'payment.dart';
+import 'payment/payment.dart';
 import 'purchase_item.dart';
+
 part 'purchase_invoice.g.dart';
+
 @JsonSerializable()
-class PurchaseInvoice  {
+class PurchaseInvoice {
   final int id;
   final String sellerId;
   final String sellerName;
@@ -42,25 +41,6 @@ class PurchaseInvoice  {
     required this.payments,
   });
 
-/*  @override
-  List<Object?> get props => <Object?>[
-    id,
-    sellerId,
-    sellerName,
-    notes,
-    date,
-    status,
-    totalAmount,
-    paidAmount,
-    paymentStatus,
-    deliveryStatus,
-    isSettled,
-    deliveries,
-    items,
-    payments,
-  ];*/
-
-  /// مبلغ باقی‌مانده = کل مبلغ - مبلغ پرداخت شده
   double get remainingAmount => totalAmount - paidAmount;
 
   /// آیا پرداخت کامل شده؟
@@ -98,7 +78,8 @@ class PurchaseInvoice  {
     );
   }
 
-  factory PurchaseInvoice.fromJson(Map<String, dynamic> json) => _$PurchaseInvoiceFromJson(json);
+  factory PurchaseInvoice.fromJson(Map<String, dynamic> json) =>
+      _$PurchaseInvoiceFromJson(json);
 
   Map<String, dynamic> toJson() => _$PurchaseInvoiceToJson(this);
 }
