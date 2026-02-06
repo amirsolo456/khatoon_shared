@@ -1,22 +1,31 @@
-# ignore everything by default
-/*
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
 
-# but keep these
-!.gitignore
-!README.md
-!pubspec.yaml
-!lib/
-!assets/
-
-# ignore common generated and IDE files nonetheless (safety)
-.dart_tool/
-.build/
-build/
-.packages
-.pub/
-.flutter-plugins
-.flutter-plugins-dependencies
-.idea/
+# IntelliJ related
 *.iml
-.vscode/
-pubspec.lock
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
