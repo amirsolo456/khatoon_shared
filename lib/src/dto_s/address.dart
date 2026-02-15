@@ -101,7 +101,6 @@ class Address {
 
 @JsonSerializable()
 class AddressWithId extends Address {
-  @override
   @JsonKey(required: true)
   final String id;
   @JsonKey(required: true)
@@ -123,22 +122,32 @@ class AddressWithId extends Address {
     required this.recipientName,
     required this.recipientPhone,
     required this.addressType,
-    required super.province,
-    required super.city,
-    super.district,
-    required super.street,
-    super.alley,
-    required super.plaque,
-    super.floor,
-    super.unit,
-    required super.postalCode,
-    super.coordinates,
+    required String province,
+    required String city,
+    String? district,
+    required String street,
+    String? alley,
+    required String plaque,
+    String? floor,
+    String? unit,
+    required String postalCode,
+    LatLng? coordinates,
     this.isDefaultShipping = false,
     this.isDefaultBilling = false,
     this.notes,
     this.verified = false,
   }) : super(
          id: id,
+         province: province,
+         city: city,
+         district: district,
+         street: street,
+         alley: alley,
+         plaque: plaque,
+         floor: floor,
+         unit: unit,
+         postalCode: postalCode,
+         coordinates: coordinates,
        );
 
   factory AddressWithId.fromJson(Map<String, dynamic> json) =>
