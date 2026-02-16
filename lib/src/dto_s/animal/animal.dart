@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+
 import 'package:khatoon_shared/index.dart';
 import 'package:khatoon_shared/src/dto_s/animal/strips.dart';
 import 'package:khatoon_shared/src/dto_s/animal/vaccination_record.dart';

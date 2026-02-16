@@ -13,7 +13,7 @@ class Invoice {
   final String type;
   final int? partyId;
   final int? sellerEmployeeId;
-  final DateTime date;
+
   final double totalAmount;
   final String status;
   final String? notes;
@@ -28,7 +28,7 @@ class Invoice {
     required this.type,
     this.partyId,
     this.sellerEmployeeId,
-    required this.date,
+
     required this.totalAmount,
     required this.status,
     this.notes,
