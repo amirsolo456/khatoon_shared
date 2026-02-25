@@ -1,0 +1,39 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'payment.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Payment _$PaymentFromJson(Map json) => Payment(
+  id: (json['id'] as num).toInt(),
+
+  amount: (json['amount'] as num).toDouble(),
+  direction: json['direction'] as String,
+  paymentMethod: json['paymentMethod'] as String?,
+  fromPartyId: (json['fromPartyId'] as num?)?.toInt(),
+  toPartyId: (json['toPartyId'] as num?)?.toInt(),
+  reference: json['reference'] as String?,
+  notes: json['notes'] as String?,
+
+  isDeleted: json['isDeleted'] as bool,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
+);
+
+Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
+  'id': instance.id,
+
+  'amount': instance.amount,
+  'direction': instance.direction,
+  'paymentMethod': instance.paymentMethod,
+  'fromPartyId': instance.fromPartyId,
+  'toPartyId': instance.toPartyId,
+  'reference': instance.reference,
+  'notes': instance.notes,
+
+  'isDeleted': instance.isDeleted,
+  'createdAt': instance.createdAt.toIso8601String(),
+  'updatedAt': instance.updatedAt.toIso8601String(),
+};

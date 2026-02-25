@@ -1,27 +1,40 @@
 name: khatoon_shared
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+
 
 environment:
-  sdk: ^3.11.0
+  sdk: ">=3.11.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
+  json_annotation: ^4.9.0
+  built_value: ^8.9.0
+  built_collection: ^5.1.1
+  latlong2: ^0.9.1
+  freezed_annotation: ^2.1.0
+  equatable: ^2.0.8
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  build_runner: ^2.4.8
+  built_value_generator: ^8.9.0
+  test: ^1.25.5
  
+  
+  
+ 
+
+  json_serializable: ^6.10.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  uses-material-design: true
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
