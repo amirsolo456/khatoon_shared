@@ -14,9 +14,9 @@ class Payment {
   final String? reference;
   final String? notes;
 
-  final bool isDeleted;
-  final DateTime createdAt;
-  final DateTime updatedAt;
+  // final bool isDeleted;
+  // final DateTime createdAt;
+  // final DateTime updatedAt;
 
   Payment({
     required this.id,
@@ -29,9 +29,9 @@ class Payment {
     this.reference,
     this.notes,
 
-    required this.isDeleted,
-    required this.createdAt,
-    required this.updatedAt,
+    // required this.isDeleted,
+    // required this.createdAt,
+    // required this.updatedAt,
   });
 
   factory Payment.fromJson(Map<String, dynamic> json) =>

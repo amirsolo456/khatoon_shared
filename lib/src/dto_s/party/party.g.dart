@@ -8,6 +8,7 @@ part of 'party.dart';
 
 Party _$PartyFromJson(Map json) => Party(
   id: (json['id'] as num).toInt(),
+  invoiceId: (json['invoiceId'] as num).toInt(),
   type: json['type'] as String,
   name: json['name'] as String,
   phone: json['phone'] as String?,
