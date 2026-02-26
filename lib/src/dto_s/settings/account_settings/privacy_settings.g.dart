@@ -6,23 +6,25 @@ part of 'privacy_settings.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PrivacySettings _$PrivacySettingsFromJson(Map json) => PrivacySettings(
-  showPurchaseHistory: json['showPurchaseHistory'] as bool? ?? true,
-  shareWishlist: json['shareWishlist'] as bool? ?? false,
-  receivePromotionalEmails: json['receivePromotionalEmails'] as bool? ?? true,
-  receiveSmsNotifications: json['receiveSmsNotifications'] as bool? ?? true,
-  isPhoneVerified: json['isPhoneVerified'] as bool? ?? false,
-  isEmailVerified: json['isEmailVerified'] as bool? ?? false,
-  shareLocation: json['shareLocation'] as bool? ?? false,
+PrivacySettings _$PrivacySettingsFromJson(
+  Map<String, dynamic> json,
+) => PrivacySettings(
+  showPurchaseHistory: json['show_purchase_history'] as bool? ?? true,
+  shareWishlist: json['share_wishlist'] as bool? ?? false,
+  receivePromotionalEmails: json['receive_promotional_emails'] as bool? ?? true,
+  receiveSmsNotifications: json['receive_sms_notifications'] as bool? ?? true,
+  isPhoneVerified: json['is_phone_verified'] as bool? ?? false,
+  isEmailVerified: json['is_email_verified'] as bool? ?? false,
+  shareLocation: json['share_location'] as bool? ?? false,
 );
 
 Map<String, dynamic> _$PrivacySettingsToJson(PrivacySettings instance) =>
     <String, dynamic>{
-      'showPurchaseHistory': instance.showPurchaseHistory,
-      'shareWishlist': instance.shareWishlist,
-      'receivePromotionalEmails': instance.receivePromotionalEmails,
-      'receiveSmsNotifications': instance.receiveSmsNotifications,
-      'isPhoneVerified': instance.isPhoneVerified,
-      'isEmailVerified': instance.isEmailVerified,
-      'shareLocation': instance.shareLocation,
+      'show_purchase_history': instance.showPurchaseHistory,
+      'share_wishlist': instance.shareWishlist,
+      'receive_promotional_emails': instance.receivePromotionalEmails,
+      'receive_sms_notifications': instance.receiveSmsNotifications,
+      'is_phone_verified': instance.isPhoneVerified,
+      'is_email_verified': instance.isEmailVerified,
+      'share_location': instance.shareLocation,
     };

@@ -6,22 +6,19 @@ part of 'preferences.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Preferences _$PreferencesFromJson(Map json) => Preferences(
+Preferences _$PreferencesFromJson(Map<String, dynamic> json) => Preferences(
   language: json['language'] as String? ?? 'fa',
   currency: json['currency'] as String? ?? 'IRT',
   theme: json['theme'] as String? ?? 'light',
   notificationSettings:
-      (json['notificationSettings'] as Map?)?.map(
-        (k, e) => MapEntry(k as String, e),
-      ) ??
-      const {},
+      json['notification_settings'] as Map<String, dynamic>? ?? const {},
   favoriteCategories:
-      (json['favoriteCategories'] as List<dynamic>?)
+      (json['favorite_categories'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList() ??
       const [],
-  autoLogin: json['autoLogin'] as bool? ?? true,
-  biometricAuth: json['biometricAuth'] as bool? ?? false,
+  autoLogin: json['auto_login'] as bool? ?? true,
+  biometricAuth: json['biometric_auth'] as bool? ?? false,
 );
 
 Map<String, dynamic> _$PreferencesToJson(Preferences instance) =>
@@ -29,8 +26,8 @@ Map<String, dynamic> _$PreferencesToJson(Preferences instance) =>
       'language': instance.language,
       'currency': instance.currency,
       'theme': instance.theme,
-      'notificationSettings': instance.notificationSettings,
-      'favoriteCategories': instance.favoriteCategories,
-      'autoLogin': instance.autoLogin,
-      'biometricAuth': instance.biometricAuth,
+      'notification_settings': instance.notificationSettings,
+      'favorite_categories': instance.favoriteCategories,
+      'auto_login': instance.autoLogin,
+      'biometric_auth': instance.biometricAuth,
     };

@@ -6,17 +6,17 @@ part of 'product.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Product _$ProductFromJson(Map json) => Product(
+Product _$ProductFromJson(Map<String, dynamic> json) => Product(
   id: (json['id'] as num).toInt(),
   name: json['name'] as String,
   code: json['code'] as String?,
   description: json['description'] as String?,
   unit: json['unit'] as String?,
-  defaultPrice: (json['defaultPrice'] as num?)?.toDouble(),
+  defaultPrice: (json['default_price'] as num?)?.toDouble(),
   version: (json['version'] as num).toInt(),
-  isDeleted: json['isDeleted'] as bool,
-  createdAt: DateTime.parse(json['createdAt'] as String),
-  updatedAt: DateTime.parse(json['updatedAt'] as String),
+  isDeleted: json['is_deleted'] as bool,
+  createdAt: DateTime.parse(json['created_at'] as String),
+  updatedAt: DateTime.parse(json['updated_at'] as String),
 );
 
 Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{
@@ -25,9 +25,9 @@ Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{
   'code': instance.code,
   'description': instance.description,
   'unit': instance.unit,
-  'defaultPrice': instance.defaultPrice,
+  'default_price': instance.defaultPrice,
   'version': instance.version,
-  'isDeleted': instance.isDeleted,
-  'createdAt': instance.createdAt.toIso8601String(),
-  'updatedAt': instance.updatedAt.toIso8601String(),
+  'is_deleted': instance.isDeleted,
+  'created_at': instance.createdAt.toIso8601String(),
+  'updated_at': instance.updatedAt.toIso8601String(),
 };

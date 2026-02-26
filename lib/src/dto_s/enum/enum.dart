@@ -25,6 +25,13 @@ enum AnimalType {
   final String persianName;
 
   const AnimalType(this.persianName);
+
+  static AnimalType fromPersianName(String persianName) {
+    return values.firstWhere(
+          (type) => type.persianName == persianName,
+      orElse: () => AnimalType.other, // یا throw کنید
+    );
+  }
 }
 
 enum VerificationStatus {

@@ -18,7 +18,10 @@ class Invoice {
   final String status;
   final String? notes;
 
-
+  final bool isDeleted;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final double version;
 
   Invoice({
     required this.id,
@@ -31,6 +34,10 @@ class Invoice {
     required this.status,
     this.notes,
 
+    required this.version,
+    required this.isDeleted,
+    required this.createdAt,
+    required this.updatedAt,
   });
 
   factory Invoice.fromJson(Map<String, dynamic> json) => _$InvoiceFromJson(json);

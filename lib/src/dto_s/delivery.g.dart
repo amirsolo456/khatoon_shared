@@ -6,16 +6,16 @@ part of 'delivery.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Delivery _$DeliveryFromJson(Map json) => Delivery(
+Delivery _$DeliveryFromJson(Map<String, dynamic> json) => Delivery(
   id: (json['id'] as num).toInt(),
   date: (json['date'] as num).toInt(),
   count: (json['count'] as num).toInt(),
-  totalWeight: (json['totalWeight'] as num).toDouble(),
+  totalWeight: (json['total_weight'] as num).toDouble(),
 );
 
 Map<String, dynamic> _$DeliveryToJson(Delivery instance) => <String, dynamic>{
   'id': instance.id,
   'date': instance.date,
   'count': instance.count,
-  'totalWeight': instance.totalWeight,
+  'total_weight': instance.totalWeight,
 };

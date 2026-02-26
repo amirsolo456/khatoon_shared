@@ -6,26 +6,26 @@ part of 'shipping_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ShippingInfo _$ShippingInfoFromJson(Map json) => ShippingInfo(
+ShippingInfo _$ShippingInfoFromJson(Map<String, dynamic> json) => ShippingInfo(
   cost: (json['cost'] as num?)?.toDouble() ?? 0.0,
-  freeShipping: json['freeShipping'] as bool? ?? false,
+  freeShipping: json['free_shipping'] as bool? ?? false,
   freeShippingThreshold:
-      (json['freeShippingThreshold'] as num?)?.toDouble() ?? 0.0,
+      (json['free_shipping_threshold'] as num?)?.toDouble() ?? 0.0,
   availableMethods:
-      (json['availableMethods'] as List<dynamic>?)
+      (json['available_methods'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList() ??
       ['پست', 'تیپاکس'],
-  estimatedDaysMin: (json['estimatedDaysMin'] as num?)?.toInt() ?? 2,
-  estimatedDaysMax: (json['estimatedDaysMax'] as num?)?.toInt() ?? 5,
+  estimatedDaysMin: (json['estimated_days_min'] as num?)?.toInt() ?? 2,
+  estimatedDaysMax: (json['estimated_days_max'] as num?)?.toInt() ?? 5,
 );
 
 Map<String, dynamic> _$ShippingInfoToJson(ShippingInfo instance) =>
     <String, dynamic>{
       'cost': instance.cost,
-      'freeShipping': instance.freeShipping,
-      'freeShippingThreshold': instance.freeShippingThreshold,
-      'availableMethods': instance.availableMethods,
-      'estimatedDaysMin': instance.estimatedDaysMin,
-      'estimatedDaysMax': instance.estimatedDaysMax,
+      'free_shipping': instance.freeShipping,
+      'free_shipping_threshold': instance.freeShippingThreshold,
+      'available_methods': instance.availableMethods,
+      'estimated_days_min': instance.estimatedDaysMin,
+      'estimated_days_max': instance.estimatedDaysMax,
     };

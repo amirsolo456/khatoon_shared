@@ -6,14 +6,14 @@ part of 'order.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Order _$OrderFromJson(Map json) => Order(
+Order _$OrderFromJson(Map<String, dynamic> json) => Order(
   id: (json['id'] as num).toInt(),
   date: (json['date'] as num).toInt(),
   quantity: (json['quantity'] as num).toInt(),
-  totalWeight: (json['totalWeight'] as num).toDouble(),
-  itemId: (json['itemId'] as num).toInt(),
-  userId: (json['userId'] as num).toInt(),
-  userRank: $enumDecode(_$UserRankEnumMap, json['userRank']),
+  totalWeight: (json['total_weight'] as num).toDouble(),
+  itemId: (json['item_id'] as num).toInt(),
+  userId: (json['user_id'] as num).toInt(),
+  userRank: $enumDecode(_$UserRankEnumMap, json['user_rank']),
   price: (json['price'] as num).toDouble(),
 );
 
@@ -21,10 +21,10 @@ Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
   'id': instance.id,
   'date': instance.date,
   'quantity': instance.quantity,
-  'totalWeight': instance.totalWeight,
-  'itemId': instance.itemId,
-  'userId': instance.userId,
-  'userRank': _$UserRankEnumMap[instance.userRank]!,
+  'total_weight': instance.totalWeight,
+  'item_id': instance.itemId,
+  'user_id': instance.userId,
+  'user_rank': _$UserRankEnumMap[instance.userRank]!,
   'price': instance.price,
 };
 

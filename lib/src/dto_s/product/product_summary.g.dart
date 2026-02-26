@@ -6,16 +6,16 @@ part of 'product_summary.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductSummary _$ProductSummaryFromJson(Map json) {
+ProductSummary _$ProductSummaryFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['id', 'title', 'price', 'stock']);
   return ProductSummary(
     id: json['id'] as String,
     title: json['title'] as String,
     price: (json['price'] as num).toDouble(),
     rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
-    reviewCount: (json['reviewCount'] as num?)?.toInt() ?? 0,
-    isFavorite: json['isFavorite'] as bool? ?? false,
-    thumbnailUrl: json['thumbnailUrl'] as String?,
+    reviewCount: (json['review_count'] as num?)?.toInt() ?? 0,
+    isFavorite: json['is_favorite'] as bool? ?? false,
+    thumbnailUrl: json['thumbnail_url'] as String?,
     stock: (json['stock'] as num).toInt(),
   );
 }
@@ -26,8 +26,8 @@ Map<String, dynamic> _$ProductSummaryToJson(ProductSummary instance) =>
       'title': instance.title,
       'price': instance.price,
       'stock': instance.stock,
-      'thumbnailUrl': instance.thumbnailUrl,
+      'thumbnail_url': instance.thumbnailUrl,
       'rating': instance.rating,
-      'reviewCount': instance.reviewCount,
-      'isFavorite': instance.isFavorite,
+      'review_count': instance.reviewCount,
+      'is_favorite': instance.isFavorite,
     };

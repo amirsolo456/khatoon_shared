@@ -6,35 +6,33 @@ part of 'invoice_line.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-InvoiceLine _$InvoiceLineFromJson(Map json) => InvoiceLine(
+InvoiceLine _$InvoiceLineFromJson(Map<String, dynamic> json) => InvoiceLine(
   id: (json['id'] as num).toInt(),
-  invoiceId: (json['invoiceId'] as num).toInt(),
-  productId: (json['productId'] as num?)?.toInt(),
+  invoiceId: (json['invoice_id'] as num).toInt(),
+  productId: (json['product_id'] as num?)?.toInt(),
   description: json['description'] as String?,
   quantity: (json['quantity'] as num).toDouble(),
-  unitPrice: (json['unitPrice'] as num).toDouble(),
-  lineTotal: (json['lineTotal'] as num).toDouble(),
-  partyId: (json['partyId'] as num?)?.toInt(),
-  sellerEmployeeId: (json['sellerEmployeeId'] as num?)?.toInt(),
-
-  isDeleted: json['isDeleted'] as bool,
-  createdAt: DateTime.parse(json['createdAt'] as String),
-  updatedAt: DateTime.parse(json['updatedAt'] as String),
+  unitPrice: (json['unit_price'] as num).toDouble(),
+  lineTotal: (json['line_total'] as num).toDouble(),
+  partyId: (json['party_id'] as num?)?.toInt(),
+  sellerEmployeeId: (json['seller_employee_id'] as num?)?.toInt(),
+  isDeleted: json['is_deleted'] as bool,
+  createdAt: DateTime.parse(json['created_at'] as String),
+  updatedAt: DateTime.parse(json['updated_at'] as String),
 );
 
 Map<String, dynamic> _$InvoiceLineToJson(InvoiceLine instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'invoiceId': instance.invoiceId,
-      'productId': instance.productId,
+      'invoice_id': instance.invoiceId,
+      'product_id': instance.productId,
       'description': instance.description,
       'quantity': instance.quantity,
-      'unitPrice': instance.unitPrice,
-      'lineTotal': instance.lineTotal,
-      'partyId': instance.partyId,
-      'sellerEmployeeId': instance.sellerEmployeeId,
-
-      'isDeleted': instance.isDeleted,
-      'createdAt': instance.createdAt.toIso8601String(),
-      'updatedAt': instance.updatedAt.toIso8601String(),
+      'unit_price': instance.unitPrice,
+      'line_total': instance.lineTotal,
+      'party_id': instance.partyId,
+      'seller_employee_id': instance.sellerEmployeeId,
+      'is_deleted': instance.isDeleted,
+      'created_at': instance.createdAt.toIso8601String(),
+      'updated_at': instance.updatedAt.toIso8601String(),
     };

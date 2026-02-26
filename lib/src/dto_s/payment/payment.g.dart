@@ -6,34 +6,24 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Payment _$PaymentFromJson(Map json) => Payment(
+Payment _$PaymentFromJson(Map<String, dynamic> json) => Payment(
   id: (json['id'] as num).toInt(),
-
   amount: (json['amount'] as num).toDouble(),
   direction: json['direction'] as String,
-  paymentMethod: json['paymentMethod'] as String?,
-  fromPartyId: (json['fromPartyId'] as num?)?.toInt(),
-  toPartyId: (json['toPartyId'] as num?)?.toInt(),
+  paymentMethod: json['payment_method'] as String?,
+  fromPartyId: (json['from_party_id'] as num?)?.toInt(),
+  toPartyId: (json['to_party_id'] as num?)?.toInt(),
   reference: json['reference'] as String?,
   notes: json['notes'] as String?,
-
-  isDeleted: json['isDeleted'] as bool,
-  createdAt: DateTime.parse(json['createdAt'] as String),
-  updatedAt: DateTime.parse(json['updatedAt'] as String),
 );
 
 Map<String, dynamic> _$PaymentToJson(Payment instance) => <String, dynamic>{
   'id': instance.id,
-
   'amount': instance.amount,
   'direction': instance.direction,
-  'paymentMethod': instance.paymentMethod,
-  'fromPartyId': instance.fromPartyId,
-  'toPartyId': instance.toPartyId,
+  'payment_method': instance.paymentMethod,
+  'from_party_id': instance.fromPartyId,
+  'to_party_id': instance.toPartyId,
   'reference': instance.reference,
   'notes': instance.notes,
-
-  'isDeleted': instance.isDeleted,
-  'createdAt': instance.createdAt.toIso8601String(),
-  'updatedAt': instance.updatedAt.toIso8601String(),
 };

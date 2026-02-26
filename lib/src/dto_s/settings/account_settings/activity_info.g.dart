@@ -6,49 +6,49 @@ part of 'activity_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ActivityInfo _$ActivityInfoFromJson(Map json) => ActivityInfo(
+ActivityInfo _$ActivityInfoFromJson(Map<String, dynamic> json) => ActivityInfo(
   lastPurchaseDate: const DateTimeNullableConverter().fromJson(
-    json['lastPurchaseDate'] as String?,
+    json['last_purchase_date'] as String?,
   ),
   lastLoginDate: const DateTimeNullableConverter().fromJson(
-    json['lastLoginDate'] as String?,
+    json['last_login_date'] as String?,
   ),
   lastWishlistUpdate: const DateTimeNullableConverter().fromJson(
-    json['lastWishlistUpdate'] as String?,
+    json['last_wishlist_update'] as String?,
   ),
   lastCartUpdate: const DateTimeNullableConverter().fromJson(
-    json['lastCartUpdate'] as String?,
+    json['last_cart_update'] as String?,
   ),
   lastProfileUpdate: const DateTimeNullableConverter().fromJson(
-    json['lastProfileUpdate'] as String?,
+    json['last_profile_update'] as String?,
   ),
   lastLoyaltyUpdate: const DateTimeNullableConverter().fromJson(
-    json['lastLoyaltyUpdate'] as String?,
+    json['last_loyalty_update'] as String?,
   ),
-  totalLogins: (json['totalLogins'] as num?)?.toInt() ?? 0,
-  totalSessions: (json['totalSessions'] as num?)?.toInt() ?? 0,
+  totalLogins: (json['total_logins'] as num?)?.toInt() ?? 0,
+  totalSessions: (json['total_sessions'] as num?)?.toInt() ?? 0,
 );
 
 Map<String, dynamic> _$ActivityInfoToJson(ActivityInfo instance) =>
     <String, dynamic>{
-      'lastPurchaseDate': const DateTimeNullableConverter().toJson(
+      'last_purchase_date': const DateTimeNullableConverter().toJson(
         instance.lastPurchaseDate,
       ),
-      'lastLoginDate': const DateTimeNullableConverter().toJson(
+      'last_login_date': const DateTimeNullableConverter().toJson(
         instance.lastLoginDate,
       ),
-      'lastWishlistUpdate': const DateTimeNullableConverter().toJson(
+      'last_wishlist_update': const DateTimeNullableConverter().toJson(
         instance.lastWishlistUpdate,
       ),
-      'lastCartUpdate': const DateTimeNullableConverter().toJson(
+      'last_cart_update': const DateTimeNullableConverter().toJson(
         instance.lastCartUpdate,
       ),
-      'lastProfileUpdate': const DateTimeNullableConverter().toJson(
+      'last_profile_update': const DateTimeNullableConverter().toJson(
         instance.lastProfileUpdate,
       ),
-      'lastLoyaltyUpdate': const DateTimeNullableConverter().toJson(
+      'last_loyalty_update': const DateTimeNullableConverter().toJson(
         instance.lastLoyaltyUpdate,
       ),
-      'totalLogins': instance.totalLogins,
-      'totalSessions': instance.totalSessions,
+      'total_logins': instance.totalLogins,
+      'total_sessions': instance.totalSessions,
     };

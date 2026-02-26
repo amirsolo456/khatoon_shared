@@ -6,7 +6,7 @@ part of 'meta_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-MetaInfo _$MetaInfoFromJson(Map json) => MetaInfo(
+MetaInfo _$MetaInfoFromJson(Map<String, dynamic> json) => MetaInfo(
   title: json['title'] as String?,
   description: json['description'] as String?,
   keywords: json['keywords'] as String?,

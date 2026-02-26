@@ -6,7 +6,7 @@ part of 'coordinates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Coordinates _$CoordinatesFromJson(Map json) => Coordinates(
+Coordinates _$CoordinatesFromJson(Map<String, dynamic> json) => Coordinates(
   latitude: (json['latitude'] as num).toDouble(),
   longitude: (json['longitude'] as num).toDouble(),
 );

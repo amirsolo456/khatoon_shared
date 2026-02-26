@@ -6,15 +6,15 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-User _$UserFromJson(Map json) {
+User _$UserFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['id']);
   return User(
     id: (json['id'] as num).toInt(),
     username: json['username'] as String,
     password: json['password'] as String,
     email: json['email'] as String,
-    lastLogin: (json['lastLogin'] as num).toInt(),
-    dataCreated: (json['dataCreated'] as num).toInt(),
+    lastLogin: (json['last_login'] as num).toInt(),
+    dataCreated: (json['data_created'] as num).toInt(),
     rank: $enumDecode(_$UserRankEnumMap, json['rank']),
     name: json['name'] as String,
     age: (json['age'] as num).toInt(),
@@ -28,8 +28,8 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
   'name': instance.name,
   'age': instance.age,
   'email': instance.email,
-  'lastLogin': instance.lastLogin,
-  'dataCreated': instance.dataCreated,
+  'last_login': instance.lastLogin,
+  'data_created': instance.dataCreated,
   'rank': _$UserRankEnumMap[instance.rank]!,
 };
 

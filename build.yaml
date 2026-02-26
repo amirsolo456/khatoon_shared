@@ -2,20 +2,10 @@ targets:
   $default:
     builders:
       json_serializable:
+        generate_for:                  # ✅ Correct place
+          include:
+            - lib/**.dart
         options:
-          generate_for:
-            - ../lib/**.dart  # یا مسیر دلخواه
-          any_map: true
-          checked: false
-          constructor: ""
-          create_factory: true
-          create_field_map: false
-          create_json_keys: false
-          create_per_field_to_json: false
-          create_to_json: true
-          disallow_unrecognized_keys: false
+
           explicit_to_json: true
-          field_rename: none
-          generic_argument_factories: true
-          ignore_unannotated: false
-          include_if_null: true
+          field_rename: snake

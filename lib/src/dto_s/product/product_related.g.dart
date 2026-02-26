@@ -6,13 +6,13 @@ part of 'product_related.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-RelatedProduct _$RelatedProductFromJson(Map json) {
+RelatedProduct _$RelatedProductFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['id', 'title', 'price']);
   return RelatedProduct(
     id: json['id'] as String,
     title: json['title'] as String,
     price: (json['price'] as num).toDouble(),
-    imageUrl: json['imageUrl'] as String?,
+    imageUrl: json['image_url'] as String?,
   );
 }
 
@@ -21,5 +21,5 @@ Map<String, dynamic> _$RelatedProductToJson(RelatedProduct instance) =>
       'id': instance.id,
       'title': instance.title,
       'price': instance.price,
-      'imageUrl': instance.imageUrl,
+      'image_url': instance.imageUrl,
     };

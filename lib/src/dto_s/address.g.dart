@@ -6,7 +6,7 @@ part of 'address.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Address _$AddressFromJson(Map json) {
+Address _$AddressFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const [
@@ -15,7 +15,7 @@ Address _$AddressFromJson(Map json) {
       'city',
       'street',
       'plaque',
-      'postalCode',
+      'postal_code',
     ],
   );
   return Address(
@@ -27,7 +27,7 @@ Address _$AddressFromJson(Map json) {
     plaque: json['plaque'] as String,
     floor: json['floor'] as String?,
     unit: json['unit'] as String?,
-    postalCode: json['postalCode'] as String,
+    postalCode: json['postal_code'] as String,
     coordinates: const LatLngNullableConverter().fromJson(
       json['coordinates'] as Map<String, dynamic>?,
     ),
@@ -45,11 +45,11 @@ Map<String, dynamic> _$AddressToJson(Address instance) => <String, dynamic>{
   'plaque': instance.plaque,
   'floor': instance.floor,
   'unit': instance.unit,
-  'postalCode': instance.postalCode,
+  'postal_code': instance.postalCode,
   'coordinates': const LatLngNullableConverter().toJson(instance.coordinates),
 };
 
-AddressWithId _$AddressWithIdFromJson(Map json) {
+AddressWithId _$AddressWithIdFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const [
@@ -57,18 +57,16 @@ AddressWithId _$AddressWithIdFromJson(Map json) {
       'city',
       'street',
       'plaque',
-      'postalCode',
-      'id',
-      'addressType',
-      'recipientName',
-      'recipientPhone',
+      'postal_code',
+      'address_type',
+      'recipient_name',
+      'recipient_phone',
     ],
   );
   return AddressWithId(
-
-    recipientName: json['recipientName'] as String,
-    recipientPhone: json['recipientPhone'] as String,
-    addressType: json['addressType'] as String,
+    recipientName: json['recipient_name'] as String,
+    recipientPhone: json['recipient_phone'] as String,
+    addressType: json['address_type'] as String,
     province: json['province'] as String,
     city: json['city'] as String,
     district: json['district'] as String?,
@@ -77,12 +75,12 @@ AddressWithId _$AddressWithIdFromJson(Map json) {
     plaque: json['plaque'] as String,
     floor: json['floor'] as String?,
     unit: json['unit'] as String?,
-    postalCode: json['postalCode'] as String,
+    postalCode: json['postal_code'] as String,
     coordinates: const LatLngNullableConverter().fromJson(
       json['coordinates'] as Map<String, dynamic>?,
     ),
-    isDefaultShipping: json['isDefaultShipping'] as bool? ?? false,
-    isDefaultBilling: json['isDefaultBilling'] as bool? ?? false,
+    isDefaultShipping: json['is_default_shipping'] as bool? ?? false,
+    isDefaultBilling: json['is_default_billing'] as bool? ?? false,
     notes: json['notes'] as String?,
     verified: json['verified'] as bool? ?? false,
   );
@@ -99,14 +97,13 @@ Map<String, dynamic> _$AddressWithIdToJson(
   'plaque': instance.plaque,
   'floor': instance.floor,
   'unit': instance.unit,
-  'postalCode': instance.postalCode,
+  'postal_code': instance.postalCode,
   'coordinates': const LatLngNullableConverter().toJson(instance.coordinates),
-  'id': instance.id,
-  'addressType': instance.addressType,
-  'recipientName': instance.recipientName,
-  'recipientPhone': instance.recipientPhone,
-  'isDefaultShipping': instance.isDefaultShipping,
-  'isDefaultBilling': instance.isDefaultBilling,
+  'address_type': instance.addressType,
+  'recipient_name': instance.recipientName,
+  'recipient_phone': instance.recipientPhone,
+  'is_default_shipping': instance.isDefaultShipping,
+  'is_default_billing': instance.isDefaultBilling,
   'notes': instance.notes,
   'verified': instance.verified,
 };

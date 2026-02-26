@@ -6,25 +6,25 @@ part of 'product_performance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductPerformance _$ProductPerformanceFromJson(Map json) {
+ProductPerformance _$ProductPerformanceFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['productId', 'productName', 'sales', 'revenue'],
+    requiredKeys: const ['product_id', 'product_name', 'sales', 'revenue'],
   );
   return ProductPerformance(
-    productId: json['productId'] as String,
-    productName: json['productName'] as String,
+    productId: json['product_id'] as String,
+    productName: json['product_name'] as String,
     sales: (json['sales'] as num).toInt(),
     revenue: (json['revenue'] as num).toDouble(),
-    growthRate: (json['growthRate'] as num?)?.toDouble() ?? 0.0,
+    growthRate: (json['growth_rate'] as num?)?.toDouble() ?? 0.0,
   );
 }
 
 Map<String, dynamic> _$ProductPerformanceToJson(ProductPerformance instance) =>
     <String, dynamic>{
-      'productId': instance.productId,
-      'productName': instance.productName,
+      'product_id': instance.productId,
+      'product_name': instance.productName,
       'sales': instance.sales,
       'revenue': instance.revenue,
-      'growthRate': instance.growthRate,
+      'growth_rate': instance.growthRate,
     };

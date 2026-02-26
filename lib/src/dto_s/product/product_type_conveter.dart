@@ -8,8 +8,8 @@ class AnimalTypeConverter implements JsonConverter<AnimalType, String> {
   const AnimalTypeConverter();
 
   @override
-  AnimalType fromJson(String json) =>
-      _$AnimalTypeConverterFromJson(json as Map) as AnimalType;
+  AnimalType fromJson(String json) => AnimalType.fromPersianName(json);
+
 
   @override
   String toJson(AnimalType type) =>
